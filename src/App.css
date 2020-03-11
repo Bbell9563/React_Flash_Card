@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+html{
+  background-color: lightcyan;
+}
+
+.flashcard{
+  padding:20px 50px;
+  border-radius: 20px ;
+  box-shadow: 5px 5px 5px #444;
+  margin: 50px;
+  background-color: white;
+}

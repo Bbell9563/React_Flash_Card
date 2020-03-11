@@ -18,7 +18,7 @@ class FlashCardShow extends React.Component {
   addCard = (card) => {
     const {flashcards} = this.state
     const cardId = flashcards.length +1 
-    const newCards = [{...flashcards[0], ...card, id:cardId}]
+    const newCards = [{...flashcards[0], ...card, id:cardId}, ...flashcards]
     this.setState({
       flashcards:newCards
     })
@@ -32,10 +32,12 @@ class FlashCardShow extends React.Component {
     })
   }
 
+
+
   render(){
     return(
     <div>
-      <FlashCardForm />
+      <FlashCardForm addCard={this.addCard}/>
       <FlashCards flashcards={this.state.flashcards}/>
     </div>
     )}
